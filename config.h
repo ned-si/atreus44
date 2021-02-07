@@ -1,5 +1,10 @@
 #pragma once
 
+#ifdef ENCODER_ENABLE
+#    define ENCODER_DIRECTION_FLIP
+#    define ENCODER_RESOLUTION 2
+#endif
+
 #define NO_ACTION_MACRO
 #define TAPPING_TERM 170
 #define TAPPING_TERM_PER_KEY
@@ -18,11 +23,4 @@
 #define COMBO_TERM 70
 
 #define UNICODE_SELECTED_MODES UC_LNX, UC_WINC
-
-// Mouse Keys
-#define MOUSEKEY_DELAY 300
-#define MOUSEKEY_INTERVAL 50
-#define MOUSEKEY_MAX_SPEED 10
-#define MOUSEKEY_TIME_TO_MAX 20
-
 /* #define UNICODE_KEY_LNX LCTL(LSFT(KC_E)) */

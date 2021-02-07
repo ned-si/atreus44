@@ -82,4 +82,3 @@ const uint32_t PROGMEM unicode_map[] = {
 #define DED_CIR X(DED__CIR)
 #define DED_UML X(DED__UML)
 #define DEGR X(DEGREE)
-
