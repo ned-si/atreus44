@@ -76,10 +76,10 @@ void NXT_PRV_finished (qk_tap_dance_state_t *state, void *user_data) {
   td_state = cur_dance(state);
   switch (td_state) {
     case SINGLE_TAP:
-      tap_code16(KC_MNXT)
+      tap_code16(KC_MNXT);
       break;
     case DOUBLE_SINGLE_TAP:
-      tap_code16(KC_MPRV)
+      tap_code16(KC_MPRV);
     break;
     default: break;
   }
@@ -120,7 +120,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_MAIN] = LAYOUT( /*main*/
+  [_MAIN] = LAYOUT( 
     KC_Q,    KC_W,    KC_E,    KC_R,      KC_T,                               KC_Y,   KC_U,    KC_I,    KC_O,       KC_P,
     HOME_A,  HOME_S,  HOME_D,  HOME_F,  HOME_G,                             HOME_H, HOME_J,  HOME_K,  HOME_L,  HOME_SCLN,
     KC_Z,    KC_X,    KC_C,      KC_V,   KC_B,      KC_CAPS,  KC_DEL,         KC_N,   KC_M, KC_COMM,  KC_DOT,    KC_SLSH,
@@ -135,39 +135,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_SYMBOLS] = LAYOUT(
-    _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, 
-    _______, _______, _______, _______, _______,                   KC_AMPR, _______, _______, _______, _______, 
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_BSLS, 
-    _______, _______, _______, _______, _______, _______, _______, _______, _______,MO(_NAV), _______, _______, 
+    _______, _______, _______,    DEGR,  KC_DQT,                   KC_QUES, KC_EXLM, KC_LCBR, KC_RCBR, _______, 
+    _______, KC_TILD, KC_ASTR,  KC_GRV, KC_QUOT,                    KC_DLR, KC_HASH, KC_LBRC, KC_RBRC, KC_PIPE, 
+    _______, _______, KC_PERC, KC_CIRC, KC_MINS, _______, KC_UNDS, KC_AMPR, KC_PLUS, KC_LPRN, KC_RPRN, KC_BSLS, 
+    _______, _______, _______, _______, _______, _______,   KC_AT,  KC_EQL, _______,MO(_NAV), _______, _______
     ),
 
   [_ACCENTS] = LAYOUT( 
     _______, _______, E_ACUTE, E_GRAVE, _______,                   DED_UML, U_GRAVE, I_CIRCU, O_CIRCU, _______, 
     A_GRAVE, A_CIRCU, E_CIRCU, _______, _______,                   DED_CIR, _______, _______, _______, _______, 
     _______, _______, C_CDILA, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
   ),
 
   [_NUMBERS] = LAYOUT( 
       KC_F9,  KC_F10,  KC_F11,  KC_F12, _______,                   _______,    KC_7,    KC_8,    KC_9, _______, 
       KC_F5,   KC_F6,   KC_F7,   KC_F8, _______,                   KC_PPLS,    KC_4,    KC_5,    KC_6,    KC_0, 
       KC_F1,   KC_F2,   KC_F3,   KC_F4, _______, _______, _______, KC_PMNS,    KC_1,    KC_2,    KC_3,  KC_DOT, 
-    _______, _______,MO(_NAV), _______, _______, _______, _______, _______, _______, _______, _______, _______, 
+    _______, _______,MO(_NAV), _______, _______, _______, _______, _______, _______, _______, _______, _______
   ),
 
   [_NAV] = LAYOUT( 
     _______, _______, _______, _______, _______,                   KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______, 
     KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                   KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, _______, 
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
-      RESET, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
+      RESET, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
   [_OPTIONS] = LAYOUT( 
     _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, 
     _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, 
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
-  ),
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+  )
 };
 
 #ifdef ENCODER_ENABLE
@@ -177,4 +177,5 @@ void encoder_update_user(uint8_t index, bool clockwise) {
   } else {
       tap_code16(KC_VOLD);
   }
+}
 #endif

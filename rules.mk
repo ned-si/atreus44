@@ -9,3 +9,7 @@ MOUSEKEY_ENABLE = yes      # Enable mouse keys
 SRC += combos.c			       # Source combos.c 
 
 EXTRFLAGS += -flto
+
+DEFAULT_FOLDER = atreus44/default
+MCU = atmega32u4
+BOOTLOADER = caterina

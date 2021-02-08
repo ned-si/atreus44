@@ -43,7 +43,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     // this helps making modifier-aware combos, 
     // like UY_PRN or SPCN_NOT, more fluid
     // when I use them with home row mods.
-    action_tapping_process((keyrecord_t));
+    action_tapping_process((keyrecord_t){});
     mod_state = get_mods();
     switch(combo_index) {
         case SPCJ_PRN:
@@ -127,7 +127,5 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 tap_code16(KC_TILD);
             }
         break;
-
-
     }
 };
