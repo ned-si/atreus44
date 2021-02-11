@@ -5,6 +5,7 @@ COMBO_ENABLE = yes 				 # Enable combos
 NKRO_ENABLE = yes 				 # Enable NKRO: any number of key-presses at once
 LTO_ENABLE = yes  				 # Enable Link Time Optimization
 MOUSEKEY_ENABLE = yes      # Enable mouse keys
+EXTRAKEY_ENABLE = yes
 
 SRC += combos.c			       # Source combos.c 
 
@@ -12,4 +13,4 @@ EXTRFLAGS += -flto
 
 DEFAULT_FOLDER = atreus44/default
 MCU = atmega32u4
-BOOTLOADER = caterina
+BOOTLOADER = atmel-dfu
