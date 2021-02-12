@@ -123,15 +123,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_MAIN] = LAYOUT( 
     KC_Q,    KC_W,    KC_E,    KC_R,      KC_T,                               KC_Y,   KC_U,    KC_I,    KC_O,       KC_P,
     HOME_A,  HOME_S,  HOME_D,  HOME_F,  HOME_G,                             HOME_H, HOME_J,  HOME_K,  HOME_L,  HOME_SCLN,
-    KC_Z,    KC_X,    KC_C,      KC_V,   KC_B,      KC_CAPS,  KC_DEL,         KC_N,   KC_M, KC_COMM,  KC_DOT,    KC_SLSH,
-    MO(_OPTIONS),TG(_GAMING),MO(_SYMBOLS),CACCCV, KC_TAB,  UNDO,    REDO,      KC_BSPC, KC_SPC, MO(_NUMBERS), NXTPRV, KC_MPLY
+    KC_Z,    KC_X,    KC_C,      KC_V,   KC_B,          KC_CAPS,  KC_DEL,     KC_N,   KC_M, KC_COMM,  KC_DOT,    KC_SLSH,
+    TG(_GAMING), UNIWL,  MO(_SYMBOLS), KC_TAB, CACCCV,     UNDO,    REDO,   KC_ENT, KC_SPC, MO(_NUMBERS), NXTPRV, KC_MPLY
   ),
 
   [_GAMING] = LAYOUT(
     KC_Q,    KC_W,    KC_E,    KC_R,      KC_T,                               KC_Y,   KC_U,    KC_I,    KC_O,       KC_P,
     HOME_A,  HOME_S,  HOME_D,  HOME_F,  HOME_G,                             HOME_H, HOME_J,  HOME_K,  HOME_L,  HOME_SCLN,
     KC_Z,    KC_X,    KC_C,      KC_V,   KC_B,      KC_CAPS,  KC_DEL,         KC_N,   KC_M, KC_COMM,  KC_DOT,    KC_SLSH,
-    MO(_OPTIONS),_______,MO(_SYMBOLS), KC_SPC, KC_TAB,  UNDO,    REDO,      KC_BSPC, KC_SPC, MO(_NUMBERS), NXTPRV, KC_MPLY
+    _______, _______,MO(_SYMBOLS), KC_SPC, KC_TAB,     UNDO,    REDO,       KC_ENT, KC_SPC, MO(_NUMBERS), NXTPRV, KC_MPLY
   ),
 
   [_SYMBOLS] = LAYOUT(
@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_TILD, KC_ASTR,  KC_GRV, KC_QUOT,                    KC_DLR, KC_HASH, KC_LBRC, KC_RBRC, KC_PIPE, 
     _______, _______, KC_PERC, KC_CIRC, KC_MINS, _______, KC_UNDS, KC_AMPR, KC_PLUS, KC_LPRN, KC_RPRN, KC_BSLS, 
     _______, _______, _______, _______, _______, _______,   KC_AT,  KC_EQL, _______,MO(_NAV), _______, _______
-    ),
+  ),
 
   [_ACCENTS] = LAYOUT( 
     _______, _______, E_ACUTE, E_GRAVE, _______,                   DED_UML, U_GRAVE, I_CIRCU, O_CIRCU, _______, 
