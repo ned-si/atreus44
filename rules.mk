@@ -7,10 +7,7 @@ LTO_ENABLE = yes  				 # Enable Link Time Optimization
 MOUSEKEY_ENABLE = yes      # Enable mouse keys
 EXTRAKEY_ENABLE = yes      # Enable extra keys
 
-SRC += combos.c			       # Source combos.c 
-
 EXTRFLAGS += -flto
 
-DEFAULT_FOLDER = atreus44/default
 MCU = atmega32u4
 BOOTLOADER = atmel-dfu
