@@ -1,13 +1,9 @@
-ENCODER_ENABLE = yes       # Enable the use of one or more encoders
-TAP_DANCE_ENABLE = yes     # Activate tap dance
-
-COMBO_ENABLE = yes 				 # Enable combos
-NKRO_ENABLE = yes 				 # Enable NKRO: any number of key-presses at once
-LTO_ENABLE = yes  				 # Enable Link Time Optimization
-MOUSEKEY_ENABLE = yes      # Enable mouse keys
-EXTRAKEY_ENABLE = yes      # Enable extra keys
-
-EXTRFLAGS += -flto
-
-MCU = atmega32u4
-BOOTLOADER = atmel-dfu
+# Built on handwired/pteron44 (4x12 matrix, ATmega32U4, atmel-dfu); the
+# atreus44 pins, encoder and USB IDs are set in config.h.
+ENCODER_ENABLE = yes
+TAP_DANCE_ENABLE = yes
+COMBO_ENABLE = yes
+NKRO_ENABLE = yes
+LTO_ENABLE = yes
+MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes
